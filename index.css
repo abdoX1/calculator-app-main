@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 800px;
+  margin: 10px;
+  background-color: beige;
+}
+.display {
+
+}
+.theme-switcher {
+
+}
+.label-theme {
+  
+}
+.theme-switcher-design {
+
+}
+.output {
+
+}
+.the-buttons {
+
+}
+.del {
+
+}
+.reset {
+
+}
+.equal {
+
+}
