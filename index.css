@@ -70,13 +70,14 @@
   --number-del-cl: hsl(0, 100%, 100%);
   --number-equal-cl: hsl(182.93deg 67.21% 11.96%);
 }
+body {
+  background-color: var(--main-bg);
+}
 .container {
   width: 375px;
   margin: 10px auto;
   padding: 10px;
-  background-color: var(--main-bg);
 }
-
 .calc-theme {
   display: flex;
   justify-content: space-between;
@@ -99,13 +100,11 @@
   font-size: .7rem;
   padding-bottom: .3rem;
 }
-
 .theme-switcher-design {
   display: grid;
   grid-template-columns: repeat(3, max-content);
   text-align: center;
 }
-
 .switcher {
   height: 20px;
   background-color: var(--screen-bg);
@@ -114,9 +113,8 @@
   display: flex;
   grid-column: span 3;
   position: relative;
-  
+  cursor: pointer;
 }
-
 .moving-object {
   width: 15px;
   height: 15px;
@@ -126,6 +124,12 @@
   position: absolute;  
   top: 2.5px;
   left: 5%;
+}
+.moving-object:hover {
+  filter: brightness(1.2);
+}
+.moving-object:active {
+  filter: brightness(1.8);
 }
 .switcher > :not(div:last-child) {
   width: calc(100% / 3);
@@ -137,6 +141,7 @@
   text-align: end;
   font-size: 2rem;
   border-radius: .5rem;
+  min-height: 4rem;
 }
 .the-buttons {
   background-color: var(--toggle-keypad-bg);
@@ -157,6 +162,7 @@ button {
   text-transform: uppercase;
   font-size: 1.5rem;
   transition: ease-out .2s;
+  box-shadow: 0px 3px var(--number-key-sh);
 }
 button:hover {
   filter: brightness(1.2);
@@ -167,14 +173,17 @@ button:active {
 .del {
   color: var(--number-del-cl);
   background-color: var(--reset-del-key-bg);
+  box-shadow: 0px 3px var(--reset-del-key-sh);
 }
 .reset {
   grid-column: span 2;
   color: var(--number-del-cl);
   background-color: var(--reset-del-key-bg);
+  box-shadow: 0px 3px var(--reset-del-key-sh);
 }
 .equal {
   grid-column: span 2;
   color: var(--number-equal-cl);
   background-color: var(--equal-key-bg);
+  box-shadow: 0px 3px var(--equal-key-sh);
 }
